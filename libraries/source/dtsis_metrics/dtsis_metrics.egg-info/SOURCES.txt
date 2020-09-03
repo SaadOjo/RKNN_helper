@@ -1,0 +1,7 @@
+dtsis_metrics.py
+setup.py
+dtsis_metrics.egg-info/PKG-INFO
+dtsis_metrics.egg-info/SOURCES.txt
+dtsis_metrics.egg-info/dependency_links.txt
+dtsis_metrics.egg-info/requires.txt
+dtsis_metrics.egg-info/top_level.txt

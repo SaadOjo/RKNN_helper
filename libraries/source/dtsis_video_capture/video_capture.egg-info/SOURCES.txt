@@ -1,0 +1,8 @@
+dtsis_capture.py
+setup.py
+test.py
+video_capture.egg-info/PKG-INFO
+video_capture.egg-info/SOURCES.txt
+video_capture.egg-info/dependency_links.txt
+video_capture.egg-info/requires.txt
+video_capture.egg-info/top_level.txt
