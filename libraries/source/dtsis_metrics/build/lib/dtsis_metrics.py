@@ -1,4 +1,5 @@
 from timeit import default_timer as timer
+import numpy as np
 
 class fps:
 	def __init__(self):
@@ -39,3 +40,15 @@ class average:
 			return self.array.sum() / self.N
 		else:
 			return self.value
+
+class stopwatch:
+    def __init__(self):
+        self.start_time = None
+    def start(self):
+        self.start_time = timer()
+    def stop(self):
+        if self.start_time == None:
+            return None
+        return timer() - self.start_time
+        
+    

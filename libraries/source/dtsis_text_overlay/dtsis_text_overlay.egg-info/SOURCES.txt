@@ -1,0 +1,7 @@
+dtsis_text_overlay.py
+setup.py
+dtsis_text_overlay.egg-info/PKG-INFO
+dtsis_text_overlay.egg-info/SOURCES.txt
+dtsis_text_overlay.egg-info/dependency_links.txt
+dtsis_text_overlay.egg-info/requires.txt
+dtsis_text_overlay.egg-info/top_level.txt
