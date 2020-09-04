@@ -48,20 +48,30 @@ while True:
         time.sleep(np.random.rand() * 0.05)
         time_averagers['inference_time'].update(sw.stop())
         times['inference_time'] = time_averagers['inference_time'].average()
-
+        '''
         print('\n\n\n\n\n')
         for x in times:
             if(times[x] != None):
                 print( '{}: {:.2f} ms'.format(x, times[x]*1000) ) 
 
-        print('The frame rate is: ' + str(fps_counter.get_fps()) )
+        #print('The frame rate is: ' + str(fps_counter.get_fps()) )
+        '''
 
         # Overlay text to our frame
+        sw.start()
         to.update_frame(frame)
         to.overlay_text('FPS: {:.2f}'.format(fps_counter.get_fps()), 0.45 )
-        
-        
+
+        for x in times:
+            if(times[x] != None):
+               display_string = '{}: {:.2f} ms'.format(x, times[x]*1000)
+               to.overlay_text(display_string, 0.6 ) 
+
+
         cv2.imshow('Face Detection', frame)
+        time_averagers['draw_time'].update(sw.stop())
+        times['draw_time'] = time_averagers['draw_time'].average()
+
         c = cv2.waitKey(5) & 0xFF
         if c ==27:
             cap.stop()
